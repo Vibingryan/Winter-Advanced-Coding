@@ -10,5 +10,6 @@ Some candidates were..
 - Personal blog utilizing Flask
 - Expense tracker(input expenses, categorize, and generate report)
 Week 1
-Finished the simple version of my recipe book app (I might add some more features)
+Reviewed the use of Class in Python with Youtube videos (https://www.youtube.com/watch?v=ZDa-Z5JzLYM)
+Finished the first version of my recipe book app (I might add some more features)
 
