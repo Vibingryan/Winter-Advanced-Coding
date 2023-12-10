@@ -9,3 +9,6 @@ Some candidates were..
 - Recipe book(you can add/edit/recommend recipes.
 - Personal blog utilizing Flask
 - Expense tracker(input expenses, categorize, and generate report)
+Week 1
+Finished the simple version of my recipe book app (I might add some more features)
+
