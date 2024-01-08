@@ -13,3 +13,5 @@ Week 1
 Reviewed the use of Class in Python with Youtube videos (https://www.youtube.com/watch?v=ZDa-Z5JzLYM)
 Finished the first version of my recipe book app (I might add some more features)
 
+Week 2
+For 3 hours, I tried to play around with while and if functions while making it. I created a simple hangman game that allows players to guess the word or the letter. I created a separate word list that I would import to the main file. 
