@@ -1,6 +1,6 @@
 import random
 from word_list import word_list
-
+#SOURCE: https://github.com/kiteco/python-youtube-code/blob/master/build-hangman-in-python/hangman.py
 name = input("Enter your name: ")
 def intro(name): #Intro of the game
     print("Hello, Welcome to Hangman " + name)     #prints out the greetings
