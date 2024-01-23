@@ -18,3 +18,42 @@ For 3 hours, I tried to play around with while and if functions while making it.
 
 Week 3
 I started watching youtube video (https://youtu.be/yQ20jZwDjTE?si=R5s7R_JyxZRangFC)that explains webscraping and learned what it is and the fundamentals behind it. I learned how to use BeautifulSoup to do the webscraping. I also tried short practice code that would get info from Pomfret School website. I am trying to use the informations I gained to create code that would get informations from the school website that could be useful.
+
+Week 4
+I started off with continuing to watch the youtube video over again to grasp more concept of how to utilize the Beautifulsoup, and started to add on to the basic structure of Beautiful Soup method. 
+My code faced two problems:
+1. When I first ran the code at the beginning(when I didn't set up the for loops yet) the code executed an error saying: "requests.exceptions.connectionerror"
+After some research, I found that one way to solve this problem is to add "User Agent" so the website will acknoledge this code as an actual user connecting to it. I could just serach up on google to find what my User Agent was and added a line that indicated my User Agent to the code: "headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}"
+Problem 1 was resolved.
+2. Second problem was to figure out how to form a for loop that would extract information from each setions(ex) Date, Time, Location, etc..) So in the for loop, I decided to use ternary operator and separated each sections to assign each sections values. So for example for code "opponent = cells[0].get_text(strip=True) if len(cells) > 0 else "N/A""
+cell[0] accesses the first cell in this list, .get_text() is Beautiful soupd method, and lens(cells) is a conditional check of having at least one cell in the row.
+Problem 2 was resolved. 
+
+The result was successfully executed as the following: 
+
+Opponent: vs.Victory Christian, Date: SatNov18, Time: 1:45PM, Location: Pomfret School - Main Lewis Gym, Result: , Score: 
+Opponent: vs.Frederick Gunn School, Date: SatDec2, Time: 3:00PM, Location: Frederick Gunn School, Result: Win, Score: 76-59
+Opponent: Scholar Round Ball v. Newman AA, Date: FriDec8, Time: 2:00PM, Location: Eastern Nazarene College, Result: Win, Score: 74-63
+Opponent: vs.Millbrook School, Date: SatDec9, Time: 5:00PM, Location: Pomfret School - Main Lewis Gym, Result: Loss, Score: 66-68
+Opponent: Hotchkiss @ Hoopsfest, Date: WedDec13, Time: 4:30PM, Location: , Result: Loss, Score: 61-63
+Opponent: IMG Academy @ Hoopsfest, Date: ThuDec14, Time: 1:15PM, Location: , Result: Win, Score: 74-72
+Opponent: vs.Roxbury Latin School, Date: FriJan5, Time: 6:00PM, Location: Roxbury Latin, Result: Win, Score: 67-49
+Opponent: vs.Governor's Academy, Date: SatJan6, Time: 3:45PM, Location: Governor's Academy, Result: Loss, Score: 66-68
+Opponent: TopFlight (CA) @ Hoophall Prep Shpwcase, Date: FriJan12, Time: 5:45PM, Location: American International College, Result: Win, Score: 69-67
+Opponent: vs.Kingswood-Oxford School, Date: SatJan13, Time: 1:00PM, Location: Pomfret School - Main Lewis Gym, Result: Loss, Score: 49-54
+Opponent: vs.Groton School, Date: WedJan17, Time: 3:30PM, Location: Groton School, Result: Win, Score: 98-47
+Opponent: vs.Marianapolis Preparatory, Date: FriJan19, Time: 7:00PM, Location: Marianapolis Preparatory, Result: Win, Score: 77-66
+Opponent: vs.Frederick Gunn School, Date: SatJan20, Time: 2:30PM, Location: Pomfret School - Main Lewis Gym, Result: Win, Score: 73-55
+Opponent: vs.St. Mark's School, Date: WedJan24, Time: 5:00PM, Location: St. Mark's School, Result: , Score: 
+Opponent: vs.Canterbury School, Date: SatJan27, Time: 3:00PM, Location: Pomfret School - Main Lewis Gym, Result: , Score: 
+Opponent: vs.Williston Northampton, Date: WedJan31, Time: 2:30PM, Location: Williston Northampton, Result: , Score: 
+Opponent: vs.Westminster School, Date: WedFeb7, Time: 3:15PM, Location: Pomfret School - Main Lewis Gym, Result: , Score: 
+Opponent: vs.Marianapolis Preparatory, Date: FriFeb9, Time: 7:00PM, Location: Pomfret School - Main Lewis Gym, Result: , Score: 
+Opponent: vs.Portsmouth Abbey, Date: SatFeb10, Time: 2:30PM, Location: Pomfret School - Main Lewis Gym, Result: , Score: 
+Opponent: vs.Beaver Country Day School, Date: WedFeb14, Time: 4:00PM, Location: Beaver Country Day School, Result: , Score: 
+Opponent: vs.Rivers School, Date: SatFeb17, Time: 3:00PM, Location: Pomfret School - Main Lewis Gym, Result: , Score: 
+Opponent: vs.Suffield Academy, Date: MonFeb19, Time: 5:00PM, Location: Suffield Academy, Result: , Score: 
+Opponent: vs.Cheshire Academy, Date: WedFeb21, Time: 3:30PM, Location: Cheshire Academy, Result: , Score: 
+Opponent: vs.New York Military Academy, Date: SatFeb24, Time: 2:00PM, Location: New York Military Academy, Result: , Score: 
+
+However, this code only scrapes from a single page of BVB team. And my optimal goal is to create a code that scrapes from multiple webpages, which would include all the sports team, and would return information that the users want to know about. So I am planning to learn how to scrape info from multiple pages and utlize them accordingly. 
