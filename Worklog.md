@@ -57,3 +57,20 @@ Opponent: vs.Cheshire Academy, Date: WedFeb21, Time: 3:30PM, Location: Cheshire 
 Opponent: vs.New York Military Academy, Date: SatFeb24, Time: 2:00PM, Location: New York Military Academy, Result: , Score: 
 
 However, this code only scrapes from a single page of BVB team. And my optimal goal is to create a code that scrapes from multiple webpages, which would include all the sports team, and would return information that the users want to know about. So I am planning to learn how to scrape info from multiple pages and utlize them accordingly. 
+
+Week 5
+
+1. The initial version of the script was a basic implementation, solely focused on extracting and displaying sports event data from a specific webpage. Recognizing the potential for enhanced functionality, I used data retrieval process within a `scrape_data` function. This not only streamlined the code but also improved its maintainability. I now sectionalized the code via functions so the code is now more straighforward. I also added features for users to actively engage with the script, specifying their interests, particularly in boys varsity basketball events.(Other teams are going to be added soon but atm I'm just dealing with the info scraped from BVB) 
+
+2. For the search functionality lots of changes were made. Initially, the script required exact matches for user inputs, which proved to be limiting. To address this, I implemented a more flexible search algorithm, capable of understanding case-insensitive inputs and partial name matches. I wanted to make the code understand the user input like "millbrook" referring to its full name "Millbrook School." 
+
+Following are the results: 
+/Users/minseokim/PycharmProjects/Findgame/venv/bin/python /Users/minseokim/PycharmProjects/Findgame/main.py
+Hello, what information are you accessing? (Type 'BVB' for boys varsity basketball): bvb
+What information are you trying to find? 1. Past events 2. Future events: 1
+Type in the opponent school's name or the date: Millbrook School
+Event Details: {'opponent': 'vs.Millbrook School', 'date': 'SatDec9', 'result': 'Loss'}
+
+Process finished with exit code 0
+
+My future goal is 1. Add more teams for the options. 2. Implement datetime module to use the real time as a parameter to determine whether the event is in the past or the future. 3. Make the returning values more concise and straightforward output. 4. Stress test the code and debug
