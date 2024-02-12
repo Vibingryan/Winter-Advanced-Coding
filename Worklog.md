@@ -74,3 +74,35 @@ Event Details: {'opponent': 'vs.Millbrook School', 'date': 'SatDec9', 'result': 
 Process finished with exit code 0
 
 My future goal is 1. Add more teams for the options. 2. Implement datetime module to use the real time as a parameter to determine whether the event is in the past or the future. 3. Make the returning values more concise and straightforward output. 4. Stress test the code and debug
+
+
+
+Week 6 - 7
+
+First thing I focused on was to add other team’s info since it could only grab info from one page about the boys' varsity basketball team in the previous version. My goal was to make this tool way more useful by getting it to work for all the sports teams at our school. So, I got to work on making the scraper smart enough to go through a bunch of different pages, each for a different sports team. That is why I created a dictionary full of urls that the code will retrieve info from:
+
+team_urls = {
+    "BVB": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/133",
+    "BJVB": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/132",
+    "GVB": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/135",
+    "GJVB": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/134",
+    "BVH": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/147",
+    "BJVH": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/146",
+    "GVH": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/149",
+    "GJVH": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/148",
+    "BVS": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/160",
+    "BJVS": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/159",
+    "GVS": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/162",
+    "GJVS": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/161",
+    "VW": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/170",
+    "VS": "https://www.pomfret.org/athletics/team-pages/~athletics-team-id/176",
+}
+
+I made sure the code will pick up the right thing from the user’s response to get from team_urls dictionary, so I added .upper function to ensure it picks up when the user answered in the lower case form. 
+
+I had to figure out how to make the scraper visit each team's page one by one and grab all the info we needed. This step was super important because it meant our tool could give us details on not just basketball but every sport. It was lucky that the logic I all ready created in the preivous version applies same with other team's pages, so I only had to add the urls in order for the code to figure out what page to get the information from.
+
+Besides adding new features, I also spent time making sure the tool worked better overall. I wrote a special part of the code (`get_win_loss_record`) that calculates how many games a team won or lost and their winning percentage. This was a neat addition because it summarized a team's performance in a simple way. I also made sure the code was clean and easy to understand, so if we need to add more stuff later, it won't be a headache.
+
+Now, it could get info on any sports team at our school, not just basketball. This was a big win because it meant our tool was way more helpful than before. Now only thing left is the stress test it and debug. 
+ 
